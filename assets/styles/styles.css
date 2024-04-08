@@ -1,0 +1,25 @@
+@import url("/assets/styles/header.css");
+@import url("/assets/styles/banner.css");
+@import url("/assets/styles/carrossel.css");
+@import url("/assets/styles/topicos.css");
+@import url("/assets/styles/contato.css");
+@import url("/assets/styles/rodape.css");
+@import url("/assets/styles/product-card.css");
+
+:root {
+  --cor-de-fundo: #EBECEE;
+  --branco: #FFFFFF;
+  --lilas: #5E17EB;
+  --roxo: #825cff;
+  --preto: #000000;
+  --cinza: #474646;
+  --cinza-claro: #858585;
+  --fonte-principal: "Poppins";
+  --fonte-secundaria: "Josefin Snas";
+}
+
+body {
+  font-family: var(--fonte-principal);
+  font-size: 16px;
+  font-weight: 400;
+}
