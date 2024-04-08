@@ -134,7 +134,7 @@
   }
 
   .carrossel__titulo:hover {
-    font-weight: lighter;
+    color: var(--lilas);
   }
 }
 
