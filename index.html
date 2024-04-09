@@ -334,6 +334,23 @@
             </div>
           </div>
 
+          <div class="swiper-slide">
+            <img src="assets/img/C1.png" alt="Creme">
+            <div class="product-details">
+              <h4><a href="#">Loção Lannister</a></h4>
+              <span class="product-catagory">Coleção Casterly Rock</span>
+              <div class="product-bottom-details">
+                <div class="product-price"><small>R$55.00</small>R$19,90</div>
+                <div class="product-links">
+                  <a href="#"><i class="fa fa-heart"></i></a>
+                </div>
+              </div>
+              <div class="btn-container">
+                <button class="product-btn">COMPRAR</button>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -447,6 +464,15 @@
         el: '.swiper-pagination',
         type: 'bullets',
       },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        1025: {
+          slidesPerView: 4,
+        }
+      }
     });
 
     const swiperDestaque = new Swiper('.swiper__destaque', {
