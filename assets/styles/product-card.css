@@ -32,11 +32,15 @@
 }
 
 .product-details p {
-    font-size: 12px;
+    font-size: 15px;
     line-height: 22px;
     margin-bottom: 18px;
     color: #353535;
     display: flex;
+}
+
+.product-details h4 {
+    font-size: 14.9px;
 }
 
 .product-bottom-details {
