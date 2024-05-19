@@ -21,7 +21,7 @@
   border-radius: 9px;
   padding: 1.2em 0 1.2em 4em;
   width: 90%;
-  background: url("../img/Pesquisa.svg") no-repeat 1.1em center; /* Ícone de lupa */
+  background: url("../img/Pesquisa.svg") no-repeat 1.1em center;
   background-size: 1.9em;
 }
 
@@ -31,6 +31,12 @@
   font-weight: 400;
   text-align: center;
   color: var(--lilas);
+}
+
+.busca__pesquisa:focus {
+  border-color: var(--lilas);
+  border-width: 2px;
+  outline: none;
 }
 
 .img-cartaz {
@@ -47,7 +53,7 @@
 
   .busca__pesquisa::placeholder {
     background-position: 1em;
-    font-size: 1.4em;
+    font-size: 1.3em;
   }
 
   @media screen and (min-width: 1728px) {

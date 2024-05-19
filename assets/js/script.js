@@ -1,4 +1,4 @@
-const swiper = new Swiper(".swiper", {
+var swiper = new Swiper(".swiper", {
   speed: 400,
   spaceBetween: 19,
   slidesPerView: 1.5,
@@ -9,6 +9,10 @@ const swiper = new Swiper(".swiper", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
   },
   breakpoints: {
     1025: {

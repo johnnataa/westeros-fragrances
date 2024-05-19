@@ -107,8 +107,25 @@
     font-size: 26px;
   }
 
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 0 40px;
+    overflow: visible;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+  }
+
+  .swiper-slide {
+    width: auto;
+    height: auto;
+  }
+
   .swiper-pagination {
-    margin: 2em 0 3em 0;
+    margin: 2em 3em 3em 3em;
   }
 
   .swiper {
@@ -122,11 +139,25 @@
     margin-right: auto;
   }
 
-  .swiper-button-prev,
-  .swiper-button-next {
-    display: block;
-    top: 60%;
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 27px;
+    height: 44px;
+    background-size: contain;
+    /* display: block; */
   }
+
+  /* .swiper-button-next {
+    right: -20px;
+  }
+
+  .swiper-button-prev {
+    left: -20px;
+  } */
 
   .card {
     width: 40%;
