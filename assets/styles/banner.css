@@ -1,4 +1,4 @@
-.banner {
+.busca {
   text-align: center;
   padding: 0 1.5em 0.5em 1.5em;
   margin-top: 0;
@@ -14,22 +14,23 @@
   margin: 1em;
 }
 
-.banner__pesquisa {
+.busca__pesquisa {
   background-color: var(--branco);
   border: 1px solid var(--lilas);
   color: var(--lilas);
   border-radius: 9px;
-  padding: 1.2em 0 1.2em 1em;
+  padding: 1.2em 0 1.2em 4em;
   width: 90%;
+  background: url("../img/Pesquisa.svg") no-repeat 1.1em center; /* Ícone de lupa */
+  background-size: 1.9em;
 }
 
-.banner__pesquisa::placeholder {
+.busca__pesquisa::placeholder {
   font-family: var(--fonte-principal);
   font-size: 14px;
   font-weight: 400;
   text-align: center;
   color: var(--lilas);
-  background: url("../img/Pesquisa.svg") no-repeat;
 }
 
 .img-cartaz {
@@ -40,25 +41,25 @@
 
 @media screen and (min-width: 1024px) {
 
-  .banner__pesquisa {
+  .busca__pesquisa {
     width: 70%;
   }
 
-  .banner__pesquisa::placeholder {
+  .busca__pesquisa::placeholder {
     background-position: 1em;
-    font-size: 18px;
+    font-size: 1.4em;
   }
 
   @media screen and (min-width: 1728px) {
-    .banner__pesquisa {
+    .busca__pesquisa {
       width: 35%;
     }
 
-    .banner__pesquisa::placeholder {
+    .busca__pesquisa::placeholder {
       background-position: 10em;
     }
 
-    .banner {
+    .busca {
       padding: 6em 0;
     }
   }
