@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link rel="stylesheet" href="./assets/styles/styles.css">
 </head>
 
@@ -453,46 +453,8 @@
       </li>
     </ul>
   </footer>
-
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper('.swiper', {
-      speed: 400,
-      spaceBetween: 19,
-      slidesPerView: 1.5,
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      breakpoints: {
-        1025: {
-          slidesPerView: 4,
-        }
-      }
-    });
-
-    const swiperDestaque = new Swiper('.swiper__destaque', {
-      speed: 400,
-      slidesPerView: 1,
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-    });
-  </script>
-
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

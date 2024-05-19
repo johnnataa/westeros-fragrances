@@ -45,6 +45,12 @@
     margin: 0.5em 1em;
   }
 
+  .tópicos__link:hover {
+    background-color: var(--lilas);
+    border-radius: 0.3em;
+    color: var(--branco);
+  }
+
   .tópicos {
     padding: 1.5em 13vw;
   }

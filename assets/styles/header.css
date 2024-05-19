@@ -154,13 +154,18 @@
   }
 
   .opções__item {
-    padding: 0 1em;
     text-transform: uppercase;
+
   }
 
   .opções__link {
+    display: block;
     text-decoration: none;
+    padding: 0.9em 1em;
     color: var(--branco);
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 100%;
   }
 
   .container__link {
@@ -202,10 +207,6 @@
   .opções__botão:checked~.opções__rotulo>.opções__item {
     background: var(--lilas);
     color: var(--branco);
-  }
-
-  .opções__item {
-    padding: 0.9em 1em;
   }
 
   .lista-menu__item:hover {

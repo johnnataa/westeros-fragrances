@@ -135,6 +135,7 @@
 
   .carrossel__titulo:hover {
     color: var(--lilas);
+    cursor: default;
   }
 }
 
