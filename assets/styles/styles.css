@@ -5,6 +5,7 @@
 @import url("/assets/styles/contato.css");
 @import url("/assets/styles/rodape.css");
 @import url("/assets/styles/product-card.css");
+@import url("/assets/styles/modal.css");
 
 :root {
   --cor-de-fundo: #EBECEE;

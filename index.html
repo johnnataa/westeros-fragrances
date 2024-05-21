@@ -96,7 +96,7 @@
 
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="assets/img/P3.png" alt="Perfume">
+            <img data-src="assets/img/P3.png" alt="Perfume">
             <div class="product-details">
               <h4><a href="#">Perfume Stark</a></h4>
               <span class="product-catagory">Coleção Winterfell</span>
@@ -113,7 +113,7 @@
           </div>
 
           <div class="swiper-slide">
-            <img src="assets/img/C1.png" alt="Creme">
+            <img data-src="assets/img/C1.png" alt="Creme">
             <div class="product-details">
               <h4><a href="#">Loção Lannister</a></h4>
               <span class="product-catagory">Coleção Casterly Rock</span>
@@ -130,7 +130,7 @@
           </div>
 
           <div class="swiper-slide">
-            <img src="assets/img/C2.png" alt="Creme">
+            <img data-src="assets/img/C2.png" alt="Creme">
             <div class="product-details">
               <h4><a href="#">Loção Baratheon</a></h4>
               <span class="product-catagory">Coleção Stormlands</span>
@@ -147,7 +147,7 @@
           </div>
 
           <div class="swiper-slide">
-            <img src="assets/img/M1.png" alt="Make">
+            <img data-src="assets/img/M1.png" alt="Make">
             <div class="product-details">
               <h4><a href="#">Make Tyrell</a></h4>
               <span class="product-catagory">Coleção The Reach</span>
@@ -164,7 +164,7 @@
           </div>
 
           <div class="swiper-slide">
-            <img src="assets/img/O1.png" alt="Óleo">
+            <img data-src="assets/img/O1.png" alt="Óleo">
             <div class="product-details">
               <h4><a href="#">Óleos Arryn</a></h4>
               <span class="product-catagory">Coleção The Eyrie</span>
@@ -184,6 +184,27 @@
         <div class="swiper-button-next"></div>
       </div>
   </section>
+
+  <div id="fade" class="hide"></div>
+  <div id="modal" class="hide">
+    <div class="modal-header">
+      <h2 class="modal__titulo">Já adicionamos na sua sacola!</h2>
+      <button id="close-modal">X</button>
+    </div>
+    <div class="modal-body">
+      <div class="body-container">
+        <img id="product-image" src="" alt="Imagem do produto">
+        <div>
+          <p id="product-name"></p>
+          <p id="product-price"></p>
+        </div>
+      </div>
+      <div class="button-container">
+        <button class="btn-continuar-comprando">Continuar Comprando</button>
+        <button class="btn-ir-para-sacola">Ir para a Sacola 🛍️</button>
+      </div>
+    </div>
+  </div>
 
   <section>
     <img data-src="./assets/img/Cartaz1.png" alt="Saldos Westeros" class="img-cartaz" loading="lazy">
@@ -455,7 +476,8 @@
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./assets/js/script.js"></script>
-  <script src="./assets/js/images.js" type="module"></script>
+  <script src="./assets/js/images.js"></script>
+  <script src="./assets/js/modalComprar.js"></script>
 
 </body>
 

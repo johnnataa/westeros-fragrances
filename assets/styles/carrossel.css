@@ -125,7 +125,8 @@
   }
 
   .swiper-pagination {
-    margin: 2em 3em 3em 3em;
+    margin: 2em 3em 0 3em;
+    pointer-events: none;
   }
 
   .swiper {
