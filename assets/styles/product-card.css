@@ -58,6 +58,8 @@
     font-size: 1.3em;
     font-weight: 600;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .product-price small {

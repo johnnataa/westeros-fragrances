@@ -58,15 +58,11 @@
 
   @media screen and (min-width: 1728px) {
     .busca__pesquisa {
-      width: 35%;
+      width: 75%;
     }
 
     .busca__pesquisa::placeholder {
       background-position: 10em;
-    }
-
-    .busca {
-      padding: 6em 0;
     }
   }
 }
