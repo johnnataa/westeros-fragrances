@@ -40,22 +40,30 @@
 
     </div>
     </div>
+
     <div class="container">
       <a href="#">
         <img src="assets/img/Favoritos.svg" alt="Imagem - Favoritos"
           class="container__imagem container__imagem-transparente">
       </a>
-      <a href="#" class="container__link">
-        <img src="assets/img/Compras.svg" alt="Imagem - Compras" class="container__imagem">
-      </a>
+      <div class="container__link container__cart-link">
+        <div id="cart-icon-container">
+          <img src="assets/img/Compras.svg" alt="Imagem - Compras" class="container__imagem">
+          <!-- Ícone da sacola com contador -->
+          <span id="cart-count">0</span>
+        </div>
+      </div>
+      
       <a href="#" class="container__link">
         <img src="assets/img/Usuário.svg" alt="Imagem - Usuário" class="container__imagem">
       </a>
     </div>
   </header>
+
   <div class="busca">
     <input type="search" class="busca__pesquisa" placeholder="O que você procura hoje?">
   </div>
+
   <div class="menu-categorias">
     <ul class="opções">
       <li class="opções__item"><a href="#" class="opções__link">Lançamentos</a></li>
@@ -81,108 +89,8 @@
           <div class="swiper-slide"><img src="assets/img/Carrossel3.png" alt="Nossas Lojas"></div>
           <div class="swiper-slide"><img src="assets/img/Carrossel4.png" alt="Fique atualizado!"></div>
         </div>
-        <!-- <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div> -->
       </div>
-  </section>
-  </div>
-  </section>
-
-  <section class="carrossel">
-    <h2 class="carrossel__titulo">💲 Westeros Promo 💲</h2>
-    <div class="carrossel__container">
-      <div class="swiper">
-        <div class="swiper-pagination"></div>
-
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img data-src="assets/img/P3.png" alt="Perfume">
-            <div class="product-details">
-              <h4><a href="#">Perfume Stark</a></h4>
-              <span class="product-catagory">Coleção Winterfell</span>
-              <div class="product-bottom-details">
-                <div class="product-price"><small>R$45.00</small>R$19,90</div>
-                <div class="product-links">
-                  <a href="#"><i class="fa fa-heart"></i></a>
-                </div>
-              </div>
-              <div class="btn-container">
-                <button class="product-btn">COMPRAR</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <img data-src="assets/img/C1.png" alt="Creme">
-            <div class="product-details">
-              <h4><a href="#">Loção Lannister</a></h4>
-              <span class="product-catagory">Coleção Casterly Rock</span>
-              <div class="product-bottom-details">
-                <div class="product-price"><small>R$55.00</small>R$19,90</div>
-                <div class="product-links">
-                  <a href="#"><i class="fa fa-heart"></i></a>
-                </div>
-              </div>
-              <div class="btn-container">
-                <button class="product-btn">COMPRAR</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <img data-src="assets/img/C2.png" alt="Creme">
-            <div class="product-details">
-              <h4><a href="#">Loção Baratheon</a></h4>
-              <span class="product-catagory">Coleção Stormlands</span>
-              <div class="product-bottom-details">
-                <div class="product-price"><small>R$99.00</small>R$69,90</div>
-                <div class="product-links">
-                  <a href="#"><i class="fa fa-heart"></i></a>
-                </div>
-              </div>
-              <div class="btn-container">
-                <button class="product-btn">COMPRAR</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <img data-src="assets/img/M1.png" alt="Make">
-            <div class="product-details">
-              <h4><a href="#">Make Tyrell</a></h4>
-              <span class="product-catagory">Coleção The Reach</span>
-              <div class="product-bottom-details">
-                <div class="product-price"><small>R$55.00</small>R$29,90</div>
-                <div class="product-links">
-                  <a href="#"><i class="fa fa-heart"></i></a>
-                </div>
-              </div>
-              <div class="btn-container">
-                <button class="product-btn">COMPRAR</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <img data-src="assets/img/O1.png" alt="Óleo">
-            <div class="product-details">
-              <h4><a href="#">Óleos Arryn</a></h4>
-              <span class="product-catagory">Coleção The Eyrie</span>
-              <div class="product-bottom-details">
-                <div class="product-price"><small>R$45.00</small>R$19,90</div>
-                <div class="product-links">
-                  <a href="#"><i class="fa fa-heart"></i></a>
-                </div>
-              </div>
-              <div class="btn-container">
-                <button class="product-btn">COMPRAR</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </div>
+    </div>
   </section>
 
   <div id="fade" class="hide"></div>
@@ -206,6 +114,23 @@
     </div>
   </div>
 
+  <section class="carrossel">
+    <h2 class="carrossel__titulo">💲 Westeros Promo 💲</h2>
+    <div class="carrossel__container">
+      <div class="swiper">
+        <div class="swiper-pagination"></div>
+
+        <div id="swiper-wrapper" class="swiper-wrapper">
+          <!--JS cards promo -->
+        </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </section>
+
+
   <section>
     <img data-src="./assets/img/Cartaz1.png" alt="Saldos Westeros" class="img-cartaz" loading="lazy">
   </section>
@@ -216,75 +141,8 @@
       <div class="swiper">
         <div class="swiper-pagination"></div>
 
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img data-src="assets/img/P1.png" alt="Perfume" loading="lazy">
-            <div class="product-details">
-              <h4><a href="#">Perfume Targaryen</a></h4>
-              <span class="product-catagory">Coleção Dragonstone</span>
-              <div class="product-bottom-details">
-                <div class="product-price"><small>R$245.00</small>R$119,90</div>
-                <div class="product-links">
-                  <a href="#"><i class="fa fa-heart"></i></a>
-                </div>
-              </div>
-              <div class="btn-container">
-                <button class="product-btn">COMPRAR</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <img data-src="assets/img/O2.png" alt="Óleos" loading="lazy">
-            <div class="product-details">
-              <h4><a href="#">Óleos Tully</a></h4>
-              <span class="product-catagory">Coleção Riverrun</span>
-              <div class="product-bottom-details">
-                <div class="product-price"><small>R$45.00</small>R$29,90</div>
-                <div class="product-links">
-                  <a href="#"><i class="fa fa-heart"></i></a>
-                </div>
-              </div>
-              <div class="btn-container">
-                <button class="product-btn">COMPRAR</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <img data-src="assets/img/P2.png" alt="Perfume" loading="lazy">
-            <div class="product-details">
-              <h4><a href="#">Loção Stark</a></h4>
-              <span class="product-catagory">Coleção Winterfell</span>
-              <div class="product-bottom-details">
-                <div class="product-price"><small>R$99.00</small>R$69,90</div>
-                <div class="product-links">
-                  <a href="#"><i class="fa fa-heart"></i></a>
-                </div>
-              </div>
-              <div class="btn-container">
-                <button class="product-btn">COMPRAR</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <img data-src="assets/img/B1.png" alt="Batom" loading="lazy">
-            <div class="product-details">
-              <h4><a href="#">Batom Targaryen</a></h4>
-              <span class="product-catagory">Coleção Dragonstone</span>
-              <div class="product-bottom-details">
-                <div class="product-price"><small>R$55.00</small>R$29,90</div>
-                <div class="product-links">
-                  <a href="#"><i class="fa fa-heart"></i></a>
-                </div>
-              </div>
-              <div class="btn-container">
-                <button class="product-btn">COMPRAR</button>
-              </div>
-            </div>
-          </div>
-
+        <div id="swiper-wrapper-2" class="swiper-wrapper">
+          <!-- JS laçamentos -->
         </div>
 
         <div class="swiper-button-prev"></div>
@@ -302,77 +160,10 @@
     <div class="carrossel__container">
       <div class="swiper">
         <div class="swiper-pagination"></div>
-        <div class="swiper-wrapper">
-
-          <div class="swiper-slide">
-            <img data-src="assets/img/P1.png" alt="Perfume" loading="lazy">
-            <div class="product-details">
-              <h4><a href="#">Perfume Targaryen</a></h4>
-              <span class="product-catagory">Coleção Dragonstone</span>
-              <div class="product-bottom-details">
-                <div class="product-price"><small>R$245.00</small>R$119,90</div>
-                <div class="product-links">
-                  <a href="#"><i class="fa fa-heart"></i></a>
-                </div>
-              </div>
-              <div class="btn-container">
-                <button class="product-btn">COMPRAR</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <img data-src="assets/img/P3.png" alt="Perfume" loading="lazy">
-            <div class="product-details">
-              <h4><a href="#">Perfume Stark</a></h4>
-              <span class="product-catagory">Coleção Winterfell</span>
-              <div class="product-bottom-details">
-                <div class="product-price"><small>R$45.00</small>R$19,90</div>
-                <div class="product-links">
-                  <a href="#"><i class="fa fa-heart"></i></a>
-                </div>
-              </div>
-              <div class="btn-container">
-                <button class="product-btn">COMPRAR</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <img data-src="assets/img/C2.png" alt="Creme" loading="lazy">
-            <div class="product-details">
-              <h4><a href="#">Loção Baratheon</a></h4>
-              <span class="product-catagory">Coleção Stormlands</span>
-              <div class="product-bottom-details">
-                <div class="product-price"><small>R$99.00</small>R$69,90</div>
-                <div class="product-links">
-                  <a href="#"><i class="fa fa-heart"></i></a>
-                </div>
-              </div>
-              <div class="btn-container">
-                <button class="product-btn">COMPRAR</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <img data-src="assets/img/C1.png" alt="Creme" loading="lazy">
-            <div class="product-details">
-              <h4><a href="#">Loção Lannister</a></h4>
-              <span class="product-catagory">Coleção Casterly Rock</span>
-              <div class="product-bottom-details">
-                <div class="product-price"><small>R$55.00</small>R$19,90</div>
-                <div class="product-links">
-                  <a href="#"><i class="fa fa-heart"></i></a>
-                </div>
-              </div>
-              <div class="btn-container">
-                <button class="product-btn">COMPRAR</button>
-              </div>
-            </div>
-          </div>
-
+        <div id="swiper-wrapper-3" class="swiper-wrapper">
         </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </div>
   </section>
@@ -475,10 +266,10 @@
     </ul>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="./assets/js/script.js"></script>
   <script src="./assets/js/images.js"></script>
+  <script src="./assets/js/products.js" type="module"></script>
+  <script src="./assets/js/script.js"></script>
   <script src="./assets/js/modalComprar.js"></script>
-
 </body>
 
 </html>

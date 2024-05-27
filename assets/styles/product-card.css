@@ -98,4 +98,17 @@
     .product-price small {
         margin-right: 15px;
     }
+
+    .swiper-slide .btn-container {
+        position: absolute;
+        bottom: 4px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: none;
+        width: 70%;
+    }
+
+    .swiper-slide:hover .btn-container {
+        display: block;
+    }
 }
