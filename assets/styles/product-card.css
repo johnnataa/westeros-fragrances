@@ -90,6 +90,17 @@
     cursor: pointer;
 }
 
+
+.favorite-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #333; /* Cor do ícone de coração */
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+
 @media screen and (min-width: 1025px) {
     .product-card {
         width: 90vh;
@@ -101,7 +112,7 @@
 
     .swiper-slide .btn-container {
         position: absolute;
-        bottom: 4px;
+        bottom: 7px;
         left: 50%;
         transform: translateX(-50%);
         display: none;

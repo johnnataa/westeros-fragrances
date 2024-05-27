@@ -1,5 +1,5 @@
 import { productsPromo, productsLanc, productsBest } from './data.js';
-import { toggleModal, setupModal, initializeModalButtons } from './modalComprar.js';
+// import { toggleModal, setupModal, initializeModalButtons } from './modalComprar.js';
 
 const swipperPromo = document.getElementById('swiper-wrapper');
 const swipperLanc = document.getElementById('swiper-wrapper-2');
@@ -18,6 +18,7 @@ function renderCards(src, name, category, priceMax, priceMin) {
                         <div class="product-price"><small>R$ ${priceMax.toFixed(2)}</small>R$ ${priceMin.toFixed(2)}</div>
                         <div class="product-links">
                             <a href="#"><i class="fa fa-heart"></i></a>
+                             <button class="favorite-btn"><img src="./assets/img/Favoritos.svg" alt="Adicionar aos Favoritos"></button>
                         </div>
                     </div>
                     <div class="btn-container">
@@ -27,20 +28,20 @@ function renderCards(src, name, category, priceMax, priceMin) {
             </div>`
 }
 
-swipperPromo.innerHTML = productsPromo.map((product) => 
-    
+swipperPromo.innerHTML = productsPromo.map((product) =>
+
     renderCards(product.src, product.name, product.category, product.priceMax, product.priceMin)
 
 ).join('');
 
-swipperLanc.innerHTML = productsLanc.map((product) => 
-    
+swipperLanc.innerHTML = productsLanc.map((product) =>
+
     renderCards(product.src, product.name, product.category, product.priceMax, product.priceMin)
 
 ).join('');
 
-swipperBest.innerHTML = productsBest.map((product) => 
-    
+swipperBest.innerHTML = productsBest.map((product) =>
+
     renderCards(product.src, product.name, product.category, product.priceMax, product.priceMin)
 
 ).join('');

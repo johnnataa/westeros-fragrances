@@ -20,7 +20,8 @@
 .container {
   display: flex;
   align-items: center;
-  padding-top: 0.1em;
+  padding-top: 0.2em;
+  gap: 1.5em;
 }
 
 
@@ -36,7 +37,6 @@
 }
 
 .container__imagem {
-  padding: 0.5em 1em 0 0;
   display: flex;
 }
 
@@ -180,7 +180,7 @@
   }
 
   .cabeçalho {
-    padding: 0 2em;
+    padding: 1em 2em 0 2em;
   }
 
   .opções {

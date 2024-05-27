@@ -1,18 +1,31 @@
-/* styles.css */
+#favorites-count {
+  position: absolute;
+    top: 3px;
+    right: 1px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    min-height: 18px;
+    z-index: 10;
+}
 
-#cart-icon-container {
+#cart-icon-container, #favorites-icon-container {
     position: relative;
     display: inline-block;
   }
   
   #cart-count {
     position: absolute;
-    top: 9px;
-    right: 19px;
+    top: 3px;
+    right: 1px;
     background-color: red;
     color: white;
     border-radius: 50%;
-    padding: 4px 5px;
     font-size: 12px;
     display: flex;
     align-items: center;
