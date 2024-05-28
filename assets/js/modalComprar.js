@@ -10,12 +10,8 @@ const setupModal = () => {
   const fade = document.querySelector("#fade");
   const continueComprandoButton = document.querySelector(".btn-continuar-comprando");
 
-  [closeModalButton, fade].forEach((el) => {
+  [closeModalButton, fade, continueComprandoButton].forEach((el) => {
     el.addEventListener("click", () => toggleModal());
-  });
-
-  continueComprandoButton.addEventListener("click", () => {
-    window.location.href = "index.html";
   });
 };
 
@@ -36,4 +32,32 @@ const initializeModalButtons = () => {
       document.querySelector("#product-image").src = productImageSrc;
     });
   });
+};
+
+let closeTimeout;
+
+const toggleSimpleFavoriteModal = () => {
+  const modal = document.querySelector("#simple-modal-favorite");
+  const fade = document.querySelector("#simple-fade-favorite");
+  modal.classList.toggle("hide");
+  fade.classList.toggle("hide");
+};
+
+const setupSimpleFavoriteModal = () => {
+  const closeModalButton = document.querySelector("#close-simple-modal-favorite");
+  const fade = document.querySelector("#simple-fade-favorite");
+
+  [closeModalButton, fade].forEach((el) => {
+    el.addEventListener("click", () => {
+      toggleSimpleFavoriteModal();
+      clearTimeout(closeTimeout);
+    });
+  });
+};
+
+const showSimpleFavoriteModal = () => {
+  toggleSimpleFavoriteModal();
+  closeTimeout = setTimeout(() => {
+    toggleSimpleFavoriteModal();
+  }, 6000);
 };

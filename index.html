@@ -44,7 +44,7 @@
     <div class="container">
       <div id="favorites-icon-container">
         <img src="./assets/img/Favoritos.svg" alt="Favoritos">
-        <span id="favorites-count">0</span>
+        <span id="favorite-count">0</span>
       </div>
         <div id="cart-icon-container">
           <img src="assets/img/Compras.svg" alt="Imagem - Compras" class="container__imagem">
@@ -109,6 +109,20 @@
       </div>
     </div>
   </div>
+
+ <!-- Modal de Favoritos Simples -->
+<div id="simple-modal-favorite" class="simple-modal hide">
+  <div class="simple-modal-content">
+      <span id="close-simple-modal-favorite" class="close-button">&times;</span>
+      <div class="simple-modal-body">
+          <img src="./assets/img/Check.svg" alt="Check" class="check-icon" />
+          <p>Produto adicionado aos favoritos!</p>
+      </div>
+  </div>
+</div>
+<div id="simple-fade-favorite" class="simple-fade hide"></div>
+
+
 
   <section class="carrossel">
     <h2 class="carrossel__titulo">💲 Westeros Promo 💲</h2>
