@@ -94,6 +94,15 @@
   text-decoration: none;
 }
 
+.favorited {
+  fill: var(--lilas);
+}
+
+.favorite-icon {
+  transition: fill 0.3s;
+}
+
+
 @media screen and (min-width: 546px) {
   .swiper {
     width: 70%;

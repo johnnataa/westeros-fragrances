@@ -55,7 +55,19 @@ const setupSimpleFavoriteModal = () => {
   });
 };
 
-const showSimpleFavoriteModal = () => {
+
+const showSimpleFavoriteModal = (isFavorited) => {
+  const modalText = document.querySelector("#simple-modal-favorite .simple-modal-body p");
+  const checkIcon = document.querySelector("#simple-modal-favorite .check-icon");
+
+  if (isFavorited) {
+    modalText.textContent = "Produto adicionado aos favoritos!";
+    checkIcon.src = "./assets/img/Check.svg";
+  } else {
+    modalText.textContent = "Produto removido dos favoritos!";
+    checkIcon.src = "./assets/img/Check.svg";
+  }
+
   toggleSimpleFavoriteModal();
   closeTimeout = setTimeout(() => {
     toggleSimpleFavoriteModal();
