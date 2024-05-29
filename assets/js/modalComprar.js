@@ -28,7 +28,7 @@ const initializeModalButtons = () => {
       const productImageSrc = productContainer.querySelector("img").getAttribute("data-src");
 
       document.querySelector("#product-name").textContent = productName;
-      document.querySelector("#product-price").innerHTML = `<strong>Preço: ${productPrice}</strong>`;
+      document.querySelector("#product-price").innerHTML = `${productPrice}`;
       document.querySelector("#product-image").src = productImageSrc;
     });
   });
@@ -73,3 +73,7 @@ const showSimpleFavoriteModal = (isFavorited) => {
     toggleSimpleFavoriteModal();
   }, 6000);
 };
+
+document.getElementById('go-to-bag').addEventListener('click', () => {
+  window.location.href = 'bag.html';
+});

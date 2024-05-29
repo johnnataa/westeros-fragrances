@@ -7,12 +7,12 @@ const cartCount = document.getElementById('cart-count');
 const favoriteCount = document.getElementById('favorite-count');
 
 const saveToLocalStorage = (key, value) => {
-    localStorage.setItem(key, JSON.stringify(value));
+  localStorage.setItem(key, JSON.stringify(value));
 };
 
 const getFromLocalStorage = (key) => {
-    const value = localStorage.getItem(key);
-    return value ? JSON.parse(value) : null;
+  const value = localStorage.getItem(key);
+  return value ? JSON.parse(value) : null;
 };
 
 let cartItems = getFromLocalStorage('cartItems') || 0;
@@ -21,6 +21,7 @@ cartCount.textContent = cartItems;
 favoriteCount.textContent = favoriteItems.length;
 
 function renderCards(src, name, category, priceMax, priceMin, productId) {
+    const isFavorited = favoriteItems.includes(productId);
     return `<div class="swiper-slide" data-id="${productId}">
                 <img data-src=${src} alt="Perfume" />
                 <div class="product-details">
@@ -31,8 +32,8 @@ function renderCards(src, name, category, priceMax, priceMin, productId) {
                         <div class="product-links">
                             <a href="#"><i class="fa fa-heart"></i></a>
                             <button class="favorite-btn">
-                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path class="favorite-icon ${favoriteItems.includes(productId) ? 'favorited' : ''}" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="#5E17EB" stroke-width="2" fill="none"/>
+                                <svg width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="favorite-icon ${isFavorited ? 'favorited' : ''}" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="#5E17EB" stroke-width="2" fill="${isFavorited ? '#FF0000' : 'none'}"/>
                                 </svg>
                             </button>
                         </div>
@@ -44,16 +45,16 @@ function renderCards(src, name, category, priceMax, priceMin, productId) {
             </div>`;
 }
 
-swipperPromo.innerHTML = productsPromo.map((product) =>
-    renderCards(product.src, product.name, product.category, product.priceMax, product.priceMin)
+swipperPromo.innerHTML = productsPromo.map((product, index) =>
+    renderCards(product.src, product.name, product.category, product.priceMax, product.priceMin, `promo-${index}`)
 ).join('');
 
-swipperLanc.innerHTML = productsLanc.map((product) =>
-    renderCards(product.src, product.name, product.category, product.priceMax, product.priceMin)
+swipperLanc.innerHTML = productsLanc.map((product, index) =>
+    renderCards(product.src, product.name, product.category, product.priceMax, product.priceMin, `lanc-${index}`)
 ).join('');
 
-swipperBest.innerHTML = productsBest.map((product) =>
-    renderCards(product.src, product.name, product.category, product.priceMax, product.priceMin)
+swipperBest.innerHTML = productsBest.map((product, index) =>
+    renderCards(product.src, product.name, product.category, product.priceMax, product.priceMin, `best-${index}`)
 ).join('');
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -80,9 +81,10 @@ function setupFavoriteButtons() {
             const iconPath = button.querySelector('svg path');
             const productId = button.closest('.swiper-slide').dataset.id;
             const isFavorited = iconPath.classList.toggle('favorited');
+            iconPath.setAttribute('fill', isFavorited ? '#5E17EB' : 'none');
             updateFavoriteList(productId, isFavorited);
             incrementFavoriteCount(isFavorited);
-            showSimpleFavoriteModal(isFavorited);
+            showSimpleFavoriteModal(isFavorited); 
         });
     });
 }
@@ -110,4 +112,3 @@ function incrementFavoriteCount(isFavorited) {
         favoriteCount.textContent = currentCount - 1;
     }
 }
-
