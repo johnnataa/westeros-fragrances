@@ -79,6 +79,10 @@
   display: none;
 }
 
+.container__titulo-link {
+  text-decoration: none;
+}
+
 .opções {
   display: none;
 }
