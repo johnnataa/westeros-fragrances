@@ -6,8 +6,22 @@ const swipperBest = document.getElementById('swiper-wrapper-3');
 const cartCount = document.getElementById('cart-count');
 const favoriteCount = document.getElementById('favorite-count');
 
-function renderCards(src, name, category, priceMax, priceMin) {
-    return `<div class="swiper-slide">
+const saveToLocalStorage = (key, value) => {
+    localStorage.setItem(key, JSON.stringify(value));
+};
+
+const getFromLocalStorage = (key) => {
+    const value = localStorage.getItem(key);
+    return value ? JSON.parse(value) : null;
+};
+
+let cartItems = getFromLocalStorage('cartItems') || 0;
+let favoriteItems = getFromLocalStorage('favoriteItems') || [];
+cartCount.textContent = cartItems;
+favoriteCount.textContent = favoriteItems.length;
+
+function renderCards(src, name, category, priceMax, priceMin, productId) {
+    return `<div class="swiper-slide" data-id="${productId}">
                 <img data-src=${src} alt="Perfume" />
                 <div class="product-details">
                     <h4><a href="#">${name}</a></h4>
@@ -17,8 +31,8 @@ function renderCards(src, name, category, priceMax, priceMin) {
                         <div class="product-links">
                             <a href="#"><i class="fa fa-heart"></i></a>
                             <button class="favorite-btn">
-                                <svg width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path class="favorite-icon" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="#5E17EB" stroke-width="2" fill="none"/>
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="favorite-icon ${favoriteItems.includes(productId) ? 'favorited' : ''}" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="#5E17EB" stroke-width="2" fill="none"/>
                                 </svg>
                             </button>
                         </div>
@@ -64,7 +78,9 @@ function setupFavoriteButtons() {
     favoriteButtons.forEach((button) => {
         button.addEventListener('click', () => {
             const iconPath = button.querySelector('svg path');
+            const productId = button.closest('.swiper-slide').dataset.id;
             const isFavorited = iconPath.classList.toggle('favorited');
+            updateFavoriteList(productId, isFavorited);
             incrementFavoriteCount(isFavorited);
             showSimpleFavoriteModal(isFavorited);
         });
@@ -72,8 +88,18 @@ function setupFavoriteButtons() {
 }
 
 function incrementCartCount() {
-    let currentCount = parseInt(cartCount.textContent, 10);
-    cartCount.textContent = currentCount + 1;
+    cartItems += 1;
+    cartCount.textContent = cartItems;
+    saveToLocalStorage('cartItems', cartItems);
+}
+
+function updateFavoriteList(productId, isFavorited) {
+    if (isFavorited) {
+        favoriteItems.push(productId);
+    } else {
+        favoriteItems = favoriteItems.filter(id => id !== productId);
+    }
+    saveToLocalStorage('favoriteItems', favoriteItems);
 }
 
 function incrementFavoriteCount(isFavorited) {
