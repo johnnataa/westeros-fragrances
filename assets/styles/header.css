@@ -154,7 +154,6 @@
 
   .icon-name {
     gap: 1em;
-    padding-left: 1em;
   }
 
   .opções__item {
@@ -184,7 +183,7 @@
   }
 
   .cabeçalho {
-    padding: 1em 2em 0 2em;
+    padding: 0.2em 2em 0 2em;
   }
 
   .opções {

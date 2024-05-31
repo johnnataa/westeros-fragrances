@@ -7,6 +7,8 @@
 @import url("/assets/styles/product-card.css");
 @import url("/assets/styles/modal.css");
 @import url("/assets/styles/contador.css");
+@import url("/assets/styles/bag.css");
+@import url("/assets/styles/favorites.css");
 
 :root {
   --cor-de-fundo: #EBECEE;

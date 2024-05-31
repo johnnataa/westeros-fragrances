@@ -5,15 +5,15 @@
   <meta charset="UTF-8">
   <link rel="icon" type="image/png" href="assets/img/logo-wf-png.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Westeros Fragrances</title>
-  <link rel="stylesheet" href="./assets/styles/reset.css">
+  <title>Sacola - Westeros Fragrances</title>
+  <link rel="stylesheet" href="../../assets/styles/reset.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <link rel="stylesheet" href="./assets/styles/styles.css">
+  <link rel="stylesheet" href="../../assets/styles/styles.css">
 </head>
 
 <body>
@@ -31,29 +31,30 @@
         <li class="lista-menu__item"><a href="#" class="lista-menu__link">Cabelos</a></li>
         <li class="lista-menu__item"><a href="#" class="lista-menu__link">Infantil</a></li>
       </ul>
-      <a class="container__titulo-link" href="index.html">
+      <a class="container__titulo-link" href="../../index.html">
         <div class="icon-name">
-          <img src="assets/img/logo-wf-png.png" alt="Logo da Westeros Fragrances" class="container__imagem-header">
+          <img src="../../assets/img/logo-wf-png.png" alt="Logo da Westeros Fragrances"
+            class="container__imagem-header">
           <h1 class="container__titulo"><b class="container__titulo-negrito">Westeros </b>Fragrances</h1>
         </div>
       </a>
     </div>
 
     <div class="container">
-      <a href="pages/favorites/favorites.html">
-        <div id="favorites-icon-container">
-          <img src="./assets/img/Favoritos.svg" alt="Favoritos">
+      <div id="favorites-icon-container">
+        <a href="../favorites/favorites.html">
+          <img src="../../assets/img/Favoritos.svg" alt="Favoritos">
           <span id="favorite-count">0</span>
-        </div>
-      </a>
-      <a href="pages/bag/bag.html">
-        <div id="cart-icon-container">
-          <img src="assets/img/Compras.svg" alt="Imagem - Compras" class="container__imagem">
+        </a>
+      </div>
+      <div id="cart-icon-container">
+        <a href="bag.html">
+          <img src="../../assets/img/Compras.svg" alt="Imagem - Compras" class="container__imagem">
           <span id="cart-count">0</span>
-        </div>
-      </a>
+        </a>
+      </div>
       <a href="#" class="container__link">
-        <img src="assets/img/Usuário.svg" alt="Imagem - Usuário" class="container__imagem">
+        <img src="../../assets/img/Usuário.svg" alt="Imagem - Usuário" class="container__imagem">
       </a>
     </div>
   </header>
@@ -77,111 +78,11 @@
     </ul>
   </div>
 
-  <section class="carrossel">
-    <div class="carrossel__container">
-      <div class="swiper__destaque">
-        <div class="swiper-pagination"></div>
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="assets/img/Carrossel1.png" alt="Coleção Beleza de Westeros"></div>
-          <div class="swiper-slide"><img src="assets/img/Carrossel2.png" alt="Mais vendidos"></div>
-          <div class="swiper-slide"><img src="assets/img/Carrossel3.png" alt="Nossas Lojas"></div>
-          <div class="swiper-slide"><img src="assets/img/Carrossel4.png" alt="Fique atualizado!"></div>
-        </div>
-      </div>
+  <main class="sacola">
+    <h1 class="sacola__titulo">Sua Sacola de Compras</h1>
+    <h2>Aqui aparecerão os produtos da sacola</h2>
     </div>
-  </section>
-
-  <div id="fade" class="hide"></div>
-  <div id="modal" class="hide">
-    <div class="modal-header">
-      <h2 class="modal__titulo">Já adicionamos na sua sacola!</h2>
-      <button id="close-modal">X</button>
-    </div>
-    <div class="modal-body">
-      <div class="body-container">
-        <img id="product-image" src="" alt="Imagem do produto">
-        <div>
-          <p id="product-name"></p>
-          <p id="product-price"></p>
-        </div>
-      </div>
-      <div class="button-container">
-        <button class="btn-continuar-comprando">Continuar Comprando</button>
-        <button class="btn-ir-para-sacola" id="go-to-bag">Ir para a Sacola 🛍️</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal de Favoritos-->
-  <div id="simple-modal-favorite" class="simple-modal hide">
-    <div class="simple-modal-content">
-      <span id="close-simple-modal-favorite" class="close-button">&times;</span>
-      <div class="simple-modal-body">
-        <img src="./assets/img/Check.svg" alt="Check" class="check-icon" />
-        <p>Produto adicionado aos favoritos!</p>
-      </div>
-    </div>
-  </div>
-  <div id="simple-fade-favorite" class="simple-fade hide"></div>
-
-
-
-  <section class="carrossel">
-    <h2 class="carrossel__titulo">💲 Westeros Promo 💲</h2>
-    <div class="carrossel__container">
-      <div class="swiper">
-        <div class="swiper-pagination"></div>
-
-        <div id="swiper-wrapper" class="swiper-wrapper">
-          <!--JS Cards promo -->
-        </div>
-
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </div>
-    </div>
-  </section>
-
-
-  <section>
-    <img data-src="./assets/img/Cartaz1.png" alt="Saldos Westeros" class="img-cartaz" loading="lazy">
-  </section>
-
-  <section class="carrossel">
-    <h2 class="carrossel__titulo">🫰 Lançamentos 🫰</h2>
-    <div class="carrossel__container">
-      <div class="swiper">
-        <div class="swiper-pagination"></div>
-
-        <div id="swiper-wrapper-2" class="swiper-wrapper">
-          <!-- JS Laçamentos -->
-        </div>
-
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <img data-src="./assets/img/Cartaz2.png" alt="Saldos Westeros" class="img-cartaz" loading="lazy">
-  </section>
-
-  <section class="carrossel">
-    <h2 class="carrossel__titulo">🔥 Mais vendidos 🔥</h2>
-    <div class="carrossel__container">
-      <div class="swiper">
-        <div class="swiper-pagination"></div>
-
-        <div id="swiper-wrapper-3" class="swiper-wrapper">
-          <!-- JS Mais vendidos -->
-        </div>
-
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </div>
-    </div>
-  </section>
+  </main>
 
   <section class="tópicos">
     <h2 class="tópicos__titulo">TÓPICOS VISITADOS RECENTEMENTE</h2>
@@ -207,8 +108,7 @@
   <section class="contato">
     <div class="contato__descrição">
       <h2 class="contato__titulo">Fique por dentro das novidades!</h2>
-      <p class="contato__texto">Mantenha-se informado sobre todas as novidades emocionantes da
-        Westeros Fragrances.</p>
+      <p class="contato__texto">Mantenha-se informado sobre todas as novidades emocionantes da Westeros Fragrances.</p>
     </div>
     <input type="email" placeholder="Cadastre seu email" class="contato__email">
   </section>
@@ -223,7 +123,7 @@
               class="rodape__link"> Johnnata Silva</a></span>
         </h2>
       </div>
-      <img src="./assets/img/logo-wf-png.png" alt="Logo Westeros Fragrances" class="img-rodape" loading="lazy">
+      <img src="../../assets/img/logo-wf-png.png" alt="Logo Westeros Fragrances" class="img-rodape" loading="lazy">
     </div>
 
     <ul class="lista__rodapé">
@@ -246,7 +146,7 @@
     </ul>
 
     <ul class="lista__rodapé">
-      <li class="lista-rodapé__titulo">Institucuinal</li>
+      <li class="lista-rodapé__titulo">Institucional</li>
       <li class="lista-rodapé__item">
         <a href="#" class="lista-rodapé__link">Nossa História</a>
       </li>
@@ -280,12 +180,9 @@
       </li>
     </ul>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="./assets/js/images.js"></script>
-  <script src="./assets/js/products.js" type="module"></script>
-  <script src="./assets/js/script.js"></script>
-  <script src="./assets/js/modal.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="../../assets/js/products.js" type="module"></script>
 </body>
 
 </html>
