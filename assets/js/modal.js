@@ -75,5 +75,5 @@ const showSimpleFavoriteModal = (isFavorited) => {
 };
 
 document.getElementById('go-to-bag').addEventListener('click', () => {
-  window.location.href = 'bag.html';
+  window.location.href = 'pages/bag/bag.html';
 });
